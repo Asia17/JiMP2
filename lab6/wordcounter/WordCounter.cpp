@@ -13,7 +13,7 @@ namespace datastructures {
         std::vector<Word> t;
         for (Word w:wc.Words())
             t.push_back(w);
-        //kopiowanie kluczy
+        //kopiowanie kluczyy
 
         // sortowanie za pomocą obietktu sortującego
         struct sorter{

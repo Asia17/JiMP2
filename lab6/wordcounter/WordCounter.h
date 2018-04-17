@@ -22,7 +22,7 @@ namespace datastructures {
         bool operator ==(const Word w) const{
             return word==w.word;
         }
-        Word(const std::string &w) : word(w) {}
+        Word(const std::string &w) : word(w) { }
 
     };
 

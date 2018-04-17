@@ -10,7 +10,7 @@
 using namespace datastructures;
 int main(){
     std::ifstream is("myfile.txt");
-    WordCounter wc = WordCounter::FromInputStream(&is);
+    WordCounter wc = WordCounter::FromInputStream(&is) ;
     // w zmiennej ilość powinna znaleźć się ilość powtórzeń
     // słowa "programowanie" w pliku "myfile.txt"
     //int ilosc = wc["programowanie"];
