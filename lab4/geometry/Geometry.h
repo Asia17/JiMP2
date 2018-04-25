@@ -9,7 +9,7 @@ class Point {
 public:
     //Konstruktor bezparametrowy
     Point();
-    //Konstruktor parametrowy
+    //Konstruktor parametrowyy
     Point(double x, double y);
     //Destruktor wykonywany przed zwolnieniem pamięci
     ~Point();

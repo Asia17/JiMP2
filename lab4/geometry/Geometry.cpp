@@ -14,7 +14,7 @@ using ::std::sqrt;
 
 
 //Specjalna inicjalizacja zmiennych. Zmienne są inicjowane
-//nim zostanie wywołane ciało konstruktora
+//nim zostanie wywołane ciało konstruktorra
 Point::Point():x_(0),y_(0){
 
 }

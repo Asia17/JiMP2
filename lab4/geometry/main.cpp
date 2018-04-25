@@ -12,7 +12,7 @@ int main(){
     Point p4 (0,2);
 
     Square kwadrat(p1,p2,p3,p4);
-    cout << "Obwod: " << kwadrat.Circumference() << endl;
+    cout << "Obwood: " << kwadrat.Circumference() << endl;
     cout << "Pole: " << kwadrat.Area() << endl;
 
 }
