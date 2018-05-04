@@ -2,6 +2,7 @@
 // Created by Asia on 2018-05-03.
 //
 
+
 #include "MovieSubtitles.h"
 
 void moviesubs::SubRipSubtitles::ShiftAllSubtitlesBy(int delay, int fps, stringstream *in, stringstream *out) {
