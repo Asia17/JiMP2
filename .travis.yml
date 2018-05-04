@@ -51,20 +51,20 @@ script:
   #- make lab5_text_pool_tests
   #- make lab6_word_counter_tests
   #- make lab7_point3d_distance_tests
-  - make lab7_iterable_tests
-  - make lab7_iterable_iterator_wrapper_tests
-  - make lab7_iterable_enumeration_tests
-  - make lab7_iterable_product_tests
-  - make lab7_iterable_zipper_tests
-  - make lab7_iterable_zipper_iterator_tests
+  #- make lab7_iterable_tests
+  #- make lab7_iterable_iterator_wrapper_tests
+  #- make lab7_iterable_enumeration_tests
+  #- make lab7_iterable_product_tests
+  #- make lab7_iterable_zipper_tests
+  #- make lab7_iterable_zipper_iterator_tests
   #- make lab7_point2d_distance_3d_tests
   #- make lab7_point3d_cout_tests
   #- make lab7_shapes_tests
-  #- make lab8_micro_dvd_correct_cases_tests
-  #- make lab8_micro_dvd_error_cases_tests
-  #- make lab8_movie_subtitles_tests
-  #- make lab8_sub_rip_correct_cases_tests
-  #- make lab8_sub_rip_error_cases_tests
+  - make lab8_micro_dvd_correct_cases_tests
+  - make lab8_micro_dvd_error_cases_tests
+  - make lab8_movie_subtitles_tests
+  - make lab8_sub_rip_correct_cases_tests
+  - make lab8_sub_rip_error_cases_tests
   #- make lab9_base_serializer_tests
   #- make lab9_json_serializer_tests
   #- make lab9_xml_serializer_tests
