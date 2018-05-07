@@ -1,7 +1,7 @@
 project(moviesubtitles)
 
-set(HEDEAR_FILES Moviesubtitles.h)
-set(SOURCE_FILES Moviesubtitles.cpp)
+set(HEDEAR_FILES MovieSubtitles.h)
+set(SOURCE_FILES MovieSubtitles.cpp)
 
 add_library(libmoviesubtitles STATIC ${SOURCE_FILES})
 target_include_directories(libmoviesubtitles PUBLIC .)
