@@ -9,6 +9,8 @@
 #include <vector>
 #include <map>
 #include <set>
+#include <algorithm>
+#include <numeric>
 
 namespace academia {
 
@@ -35,7 +37,7 @@ namespace academia {
     class Schedule {
     public:
         Schedule(){};
-        Schedule(std::vector<SchedulingItem> wektor_wartosci):wektor_wartosci_(wektor_wartosci){};
+        explicit Schedule(std::vector<SchedulingItem> wektor_wartosci):VectorWithAll(wektor_wartosci){};
         ~Schedule() = default;
         Schedule OfTeacher(int teacher_id) const; //wylicza fragment harmonogramu związany z danym nauczycielem akademickim
         Schedule OfRoom(int room_id) const;
@@ -44,10 +46,10 @@ namespace academia {
         void InsertScheduleItem(const SchedulingItem &item); //- wstawia nowy element planu
         size_t Size() const; //- zwaraca rozmiar planu
         SchedulingItem operator[](int i) const;
-
+        std::set<int> zajete_sloty;   // set a nie vector bo set jest automatycznie posortowany co sie przydaje w set_intersection i set_difference
     private:
-        std::vector<SchedulingItem> wektor_wartosci_;
-        std::vector<int> zajete_sloty;
+        std::vector<SchedulingItem> VectorWithAll;
+
     };
 
 
