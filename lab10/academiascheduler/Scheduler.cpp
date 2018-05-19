@@ -71,7 +71,25 @@ namespace academia {
        // std::set_difference(wolne_sloty.begin(),wolne_sloty.end(),przeciecie_zajetych.begin(),przeciecie_zajetych.end(),std::back_inserter(wolne_sloty_minus_przeciecie_zajetych));
         std::set_difference(wolne_sloty.begin(),wolne_sloty.end(),zajete_sloty.begin(),zajete_sloty.end(),std::back_inserter(wolne_sloty_minus_zajete_sloty));
         return wolne_sloty_minus_zajete_sloty;
+    }
 
+    Schedule GreedyScheduler::PrepareNewSchedule(const std::vector<int> &rooms,
+                                                 const std::map<int, std::vector<int>> &teacher_courses_assignment,
+                                                 const std::map<int, std::set<int>> &courses_of_year,
+                                                 int n_time_slots) {
+
+        std::vector<SchedulingItem> wartosci_planu;
+        //para - klucz= rozpiska nauczycieli, wartość = prowadzone przedmioty przez nauczyciela
+     // para2 - klucz= konkretny rocznik, wartość = wymagane dla niego przedmioty
+        for(auto para:teacher_courses_assignment){
+            for (auto przedmiot:para.second){
+                for(auto para2:courses_of_year){
+                    if(para2.second.find(przedmiot) != para2.second.end()){
+                        wartosci_planu.emplace_back(SchedulingItem(przedmiot,para.first,0,0,para2.first));
+                    }
+                }  //przyporządkowanie nauczyciela
+            }
+        }
 
 
     }
