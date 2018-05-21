@@ -65,11 +65,11 @@ script:
   #- make lab8_movie_subtitles_tests
   #- make lab8_sub_rip_correct_cases_tests
   #- make lab8_sub_rip_error_cases_tests
-  - make lab9_base_serializer_tests
-  - make lab9_json_serializer_tests
-  - make lab9_xml_serializer_tests
-  #- make lab10_schedule_tests
-  #- make lab10_scheduler_tests
+  #- make lab9_base_serializer_tests
+  #- make lab9_json_serializer_tests
+  #- make lab9_xml_serializer_tests
+  - make lab10_schedule_tests
+  - make lab10_scheduler_tests
   #- make lab12_sequential_generator_tests
   #- make lab12_teacher_hash_tests
   #- make lab12_time_recorder_tests
