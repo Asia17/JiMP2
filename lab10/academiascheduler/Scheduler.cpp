@@ -54,7 +54,7 @@ namespace academia {
         std::set<int> wolne_sloty;
 
         //całkowite wypełnienie "wolnego" w sposób  dla 20: 1 ⇒ pon 8:00-10:00, 2 ⇒ pon 10:00-12:00, … 20 ⇒ pią 14:00-16:00
-       for (int i=1; i <=n_time_slots; i++){
+        for (int i=1; i <=n_time_slots; i++){
             wolne_sloty.insert(i);
         }
 
@@ -68,7 +68,7 @@ namespace academia {
         std::vector<int> wolne_sloty_minus_zajete_sloty;
         //std::vector<int> wolne_sloty_minus_przeciecie_zajetych;
         //std::set_intersection(wolne_sloty.begin(),wolne_sloty.end(),zajete_sloty.begin(),zajete_sloty.end(),std::back_inserter(przeciecie_zajetych));
-       // std::set_difference(wolne_sloty.begin(),wolne_sloty.end(),przeciecie_zajetych.begin(),przeciecie_zajetych.end(),std::back_inserter(wolne_sloty_minus_przeciecie_zajetych));
+        // std::set_difference(wolne_sloty.begin(),wolne_sloty.end(),przeciecie_zajetych.begin(),przeciecie_zajetych.end(),std::back_inserter(wolne_sloty_minus_przeciecie_zajetych));
         std::set_difference(wolne_sloty.begin(),wolne_sloty.end(),zajete_sloty.begin(),zajete_sloty.end(),std::back_inserter(wolne_sloty_minus_zajete_sloty));
         return wolne_sloty_minus_zajete_sloty;
     }
@@ -80,7 +80,7 @@ namespace academia {
 
         std::vector<SchedulingItem> wartosci_planu;
         //para - klucz= rozpiska nauczycieli, wartość = prowadzone przedmioty przez nauczyciela
-     // para2 - klucz= konkretny rocznik, wartość = wymagane dla niego przedmioty
+        // para2 - klucz= konkretny rocznik, wartość = wymagane dla niego przedmioty
         for(auto para:teacher_courses_assignment){
             for (auto przedmiot:para.second){
                 for(auto para2:courses_of_year){
@@ -90,9 +90,9 @@ namespace academia {
                 }  //przyporządkowanie nauczyciela
             }
         }
-    if(n_time_slots*rooms.size() < wartosci_planu.size()){
-        throw NoViableSolutionFound("Nie mozna utworzyc planu!");
-    }
+        if(n_time_slots*rooms.size() < wartosci_planu.size()){
+            throw NoViableSolutionFound("Nie mozna utworzyc planu!");
+        }
 
         int licznik=0;
         for (auto pomieszcznie:rooms){
@@ -110,9 +110,9 @@ namespace academia {
         int licznik_przedmiotow;
         for(auto para3:courses_of_year){
             for(auto przedmiot:para3.second){
-                licznik_przedmiotow==0;
+                licznik_przedmiotow=0;
                 for(auto para4:teacher_courses_assignment){
-                    licznik += std::count(para4.second.begin(),para4.second.end(),przedmiot);
+                    licznik_przedmiotow += std::count(para4.second.begin(),para4.second.end(),przedmiot);
 
                 }
                 if(n_time_slots<licznik_przedmiotow){
