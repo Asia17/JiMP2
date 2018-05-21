@@ -90,6 +90,38 @@ namespace academia {
                 }  //przyporządkowanie nauczyciela
             }
         }
+    if(n_time_slots*rooms.size() < wartosci_planu.size()){
+        throw NoViableSolutionFound("Nie mozna utworzyc planu!");
+    }
+
+        int licznik=0;
+        for (auto pomieszcznie:rooms){
+            for(int slot=1; slot <=n_time_slots;slot++) {
+                if (licznik < wartosci_planu.size()) {
+                    wartosci_planu[licznik].time_slot = slot;
+                    wartosci_planu[licznik].room_id = pomieszcznie;
+
+                }  //przyporządkowanie sali
+                licznik++;
+            }
+        }
+// para3 - klucz= konkretny rocznik, wartość = wymagane dla niego przedmioty
+        //para4 - klucz= rozpiska nauczycieli, wartość = prowadzone przedmioty przez nauczyciela
+        int licznik_przedmiotow;
+        for(auto para3:courses_of_year){
+            for(auto przedmiot:para3.second){
+                licznik_przedmiotow==0;
+                for(auto para4:teacher_courses_assignment){
+                    licznik += std::count(para4.second.begin(),para4.second.end(),przedmiot);
+
+                }
+                if(n_time_slots<licznik_przedmiotow){
+                    throw NoViableSolutionFound("Nie mozna utowrzyc planu!");
+                }
+            }
+        }
+
+        return Schedule{wartosci_planu};
 
 
     }
