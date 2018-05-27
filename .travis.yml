@@ -68,11 +68,11 @@ script:
   #- make lab9_base_serializer_tests
   #- make lab9_json_serializer_tests
   #- make lab9_xml_serializer_tests
-  - make lab10_schedule_tests
-  - make lab10_scheduler_tests
+  #- make lab10_schedule_tests
+  #- make lab10_scheduler_tests
   #- make lab12_sequential_generator_tests
   #- make lab12_teacher_hash_tests
-  #- make lab12_time_recorder_tests
+  - make lab12_time_recorder_tests
   #- make lab12_tree_preorder_tests
   #- make lab12_tree_inorder_tests
   #- make lab12_tree_postorder_tests
