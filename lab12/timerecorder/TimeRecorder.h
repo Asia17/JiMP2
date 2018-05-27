@@ -15,12 +15,12 @@ namespace profiling
     auto TimeRecorder(T object)    {
         std::chrono::time_point<std::chrono::system_clock> begin, stop;
             begin = std::chrono::system_clock::now();
-            object();
+            auto o = object();
             stop = std::chrono::system_clock::now();
 
         auto time =  std::chrono::duration<double, std::milli>(stop-begin).count();
 
-        return std::pair<decltype(object()), double> {object(), time};
+        return std::pair<decltype(o), double> {o, time};
 
     };
 }
