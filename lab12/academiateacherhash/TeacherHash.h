@@ -35,7 +35,7 @@ namespace academia{
 
         //operatory
         bool operator !=(Teacher another) const
-        { return (id_ != another.Id() && name_ != another.Name() && department_ != another.Department() ) ; }
+        { return (id_ != another.Id() || name_ != another.Name() || department_ != another.Department() ) ; }
 
         bool operator ==(Teacher another) const
         { return (id_ == another.Id() && name_ == another.Name() && department_ == another.Department() );}
