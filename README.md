@@ -1,3 +1,8 @@
+link do strony z laboratoriami, w każdym z laboratoriów znajduję się szczegółowy opis wykonanych zadań
+https://ai.ia.agh.edu.pl/wiki/pl:dydaktyka:jimp2:2017:start
+
+
+
 ### C++ programming classes problmes ###
 
 [![Build Status](https://travis-ci.org/micwypych/cpp-exercises.svg?branch=master)](https://travis-ci.org/micwypych/cpp-exercises)
