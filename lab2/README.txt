@@ -9,3 +9,5 @@ Array 2D - program, który w pierwszej kolejności wczyta od użytkownika rozmia
 
 xor cypher breaker - łamanie hasła
 
+Greatest product - program, który jest w stanie wyliczyć największy iloczyn k liczb z podanych n liczb na wejściu
+
