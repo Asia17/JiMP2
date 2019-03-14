@@ -5,3 +5,7 @@ Wynik szyfrowania/deszyfrowania  znajduje się w pliku wyjściowym podanym jako 
 
 
 Array 2D - program, który w pierwszej kolejności wczyta od użytkownika rozmiar tablicy, stworzy dynamicznie tablicę o podanych wymiarach, następnie uzupełni ją losowymi liczbami całkowitymi i znajdzie te liczby w tablicy, których iloczyn da największą liczbę.
+
+
+xor cypher breaker - łamanie hasła
+
