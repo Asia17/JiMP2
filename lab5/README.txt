@@ -1,0 +1,3 @@
+Text pool - implementacja  puli napisów (Pula łańcuchów znaków jest to jeden ze sposobów optymalizacji dużej ilości napisów w programie. Trick polega na tym, że powtarzające się napisy przechowujemy w tym samym miejscu pamięci. Obiektowi puli napisów można powierzyć przechowywanie konkretnego napisu za pomocą funkcji Intern w rezultacie dostajemy uchwyt do napisu, który jest już zarządzany przez obiekt puli. Jeśli kilka identycznych napisów zostanie wstawionych do puli to tylko jedna instancja napisu będzie przechowywana wewnątrz, a wszystkie zwracany uchwyty pokazują ciągle na ten sam napis wewnątrz puli.)
+
+Matrix - klasa o nazwie Matrix, która będzie reprezentować macierz o dowolnych rozmiarach. 
